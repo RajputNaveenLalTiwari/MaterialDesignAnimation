@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:id="@+id/sharedElementTransitionContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/done"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/done"
+            android:transitionName="done_shared_transition" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shared Element Transition"
+            android:textColor="@android:color/black"
+            android:transitionName="text_shared_transition"
+            android:layout_margin="10dp"/>
+
+        <ImageView
+            android:id="@+id/nofiles"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/nofiles"
+            android:transitionName="nofiles_shared_transition"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/transitionActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Transition Activity"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/touchFeedBackActivity"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:text="Touch Feedback Animation"
+        android:layout_above="@+id/transitionActivity"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"/>
+
+</RelativeLayout>
